@@ -6,7 +6,7 @@ make_apa_str = function(out) {
   #' returns the APA Formatted String.
   #'
   #' @param out The output of the test
-  #' @return APAstr APAstr or named list of APAstr if multiple hypothesis tests
+  #' @return APAstr or named list of APAstr if multiple hypothesis tests
   #' @example man/Example/make_apa_str_1f_anova.R
 
   #' @export

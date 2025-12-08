@@ -10,7 +10,7 @@ make_apa_str(out)
 \item{out}{The output of the test}
 }
 \value{
-APAstr APAstr or named list of APAstr if multiple hypothesis tests
+APAstr or named list of APAstr if multiple hypothesis tests
 }
 \description{
 Given the output of the tests from Psych 522/4,
