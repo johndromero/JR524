@@ -17,12 +17,6 @@ Given the output of the tests from Psych 522/4,
 returns the APA Formatted String.
 }
 \examples{
-out = anova(lm(y ~ x1 * x2, data=data))
-APAstr = make_apa_str(out)
-
-out = t.test(y ~ x, data=data)
-APAstr(out)
-
-out = chisq.test(x, p=p)
-APAstr(out)
+out = anova(lm(Sepal.Length ~ Species, data=iris))
+make_apa_str(out)
 }

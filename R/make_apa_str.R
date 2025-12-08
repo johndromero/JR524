@@ -7,15 +7,8 @@ make_apa_str = function(out) {
   #'
   #' @param out The output of the test
   #' @return APAstr APAstr or named list of APAstr if multiple hypothesis tests
-  #' @examples
-    #' out = anova(lm(y ~ x1 * x2, data=data))
-    #' APAstr = make_apa_str(out)
-    #'
-    #'out = t.test(y ~ x, data=data)
-    #'APAstr(out)
-    #'
-    #'out = chisq.test(x, p=p)
-    #'APAstr(out)
+  #' @example man/Example/make_apa_str_1f_anova.R
+
   #' @export
 
   APAstr = list()
