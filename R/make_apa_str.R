@@ -13,12 +13,12 @@ make_apa_str = function(out) {
 
   APAstr = list()
 
-  get_eq = function(p) ifelse(p >= 0.001, '=', '<')
-  get_pstr = function(p) ifelse(p,
+  get_eq = function(p) ifelse(p >= 0.0001, '=', '<')
+  get_pstr = function(p) ifelse(p >= 0.0001,
                                 sub('0.','.',sprintf('%0.4f', p)),
-                                '.001')
+                                '.0001')
   # Chi-Square
-  if (any(grepl("Chi-squared", attr(out, "heading"), fixed=T))) {
+  if (any(grepl("Chi-squared", out$method, fixed=T))) {
 
     pstr = get_pstr(out$p.value)
     eq = get_eq(out$p.value)
