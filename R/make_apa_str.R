@@ -30,12 +30,15 @@ make_apa_str = function(out) {
   }
 
   # T-Test
-  if (any(grepl("t-test", attr(out, "heading"), fixed=T))) {
+  if (any(grepl("t-test", out$method, fixed=T))) {
 
     pstr = get_pstr(out$p.value)
     eq = get_eq(out$p.value)
-    APAstr = sprintf('_t(%d) = %0.2f, p %s %s_', out$parameter,
-                  out$statistic, eq, pstr)
+    dfstr = ifelse(out$parameter %% 1 == 0,
+                   sprintf('%.0f', out$parameter),
+                   sprintf('%0.2f', out$parameter))
+    APAstr = sprintf('_t(%s) = %0.2f, p %s %s_', dfstr,
+                     out$statistic, eq, pstr)
   }
   #
 
