@@ -4,7 +4,7 @@
 \alias{display_help}
 \title{Display the help for function.}
 \usage{
-display_help(function_name)
+display_help(function_name, proj_dir)
 }
 \arguments{
 \item{funtion_name}{The name of the function, str}

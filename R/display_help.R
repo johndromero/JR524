@@ -1,4 +1,4 @@
-display_help = function(function_name) {
+display_help = function(function_name, proj_dir) {
 
   #' @title Display the help for function.
   #'
@@ -13,7 +13,7 @@ display_help = function(function_name) {
   #' @export
   #'
 
-  rdfile = Rd2md::read_rdfile(sprintf("/man/%s.Rd", function_name))
+  rdfile = Rd2md::read_rdfile(paste0(proj_dir, '/', sprintf("/man/%s.Rd", function_name)))
   markdown_doc = Rd2md::as_markdown(rdfile)
   knittr::asis_output(markdown_doc)
 
