@@ -43,7 +43,7 @@ make_apa_str = function(out) {
   #
 
   # Type III ANOVA Table
-  else if (any(grepl('Type III', attr(out, "heading"), fixed=T))) {
+  else if (any(grepl('Type III Analysis of Variance Table', attr(out, "heading"), fixed=T))) {
 
     for (r in row.names(out)) {
 
