@@ -15,6 +15,9 @@ APAstr or named list of APAstr if multiple hypothesis tests
 \description{
 Given the output of the tests from Psych 522/524, returns the APA Formatted String.
 }
+\note{
+In the case of an interaction in ANOVA: Reference this as `Factor1xFactor2` and not `Factor1:Factor2`, which is shown in the ANOVA table.
+}
 \examples{
 ### T-TEST
 data = iris[iris$Species != "virginica",]
