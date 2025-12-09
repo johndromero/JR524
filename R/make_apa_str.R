@@ -29,7 +29,7 @@ make_apa_str = function(out) {
   }
 
   # T-Test
-  if (any(grepl("t-test", out$method, fixed=T))) {
+  else if (any(grepl("t-test", out$method, fixed=T))) {
 
     pstr = get_pstr(out$p.value)
     eq = get_eq(out$p.value)
@@ -42,7 +42,7 @@ make_apa_str = function(out) {
   #
 
   # Type III ANOVA Table
-  if (any(grepl('Type III', attr(out, "heading"), fixed=T))) {
+  else if (any(grepl('Type III', attr(out, "heading"), fixed=T))) {
 
     for (r in row.names(out)) {
 
@@ -60,7 +60,7 @@ make_apa_str = function(out) {
   }
 
   # Type I ANOVA Table
-  else {
+  else if (any(grepl('Analysis of Variance Table', attr(out, "heading"), fixed=T))) {
 
     for (r in row.names(out)) {
       if (r != 'Residuals') {
