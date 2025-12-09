@@ -2,12 +2,13 @@ make_apa_str = function(out) {
 
   #' @title Make APA String
   #'
-  #' @description Given the output of the tests from Psych 522/4,
-  #' returns the APA Formatted String.
+  #' @description Given the output of the tests from Psych 522/524, returns the APA Formatted String.
   #'
   #' @param out The output of the test
   #' @return APAstr or named list of APAstr if multiple hypothesis tests
   #' @example man/Example/make_apa_str_1f_anova.R
+  #' @example man/Example/make_apa_str_ttest.R
+  #' @example man/Example/make_apa_str_chisq.R
 
   #' @export
 

@@ -13,10 +13,15 @@ make_apa_str(out)
 APAstr or named list of APAstr if multiple hypothesis tests
 }
 \description{
-Given the output of the tests from Psych 522/4,
-returns the APA Formatted String.
+Given the output of the tests from Psych 522/524, returns the APA Formatted String.
 }
 \examples{
-out = anova(lm(Sepal.Length ~ Species, data=iris))
+(out = anova(lm(Sepal.Length ~ Species, data=iris)))
 make_apa_str(out)
+data = iris[iris$Species != "virginica",]
+(out = t.test(Sepal.Length ~ Species, data = data, var.equal=TRUE))
+(make_apa_str(out))
+(tab = table(mtcars$cyl))
+(out = chisq.test(tab))
+(make_apa_str(out))
 }
