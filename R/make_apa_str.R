@@ -6,9 +6,7 @@ make_apa_str = function(out) {
   #'
   #' @param out The output of the test
   #' @return APAstr or named list of APAstr if multiple hypothesis tests
-  #' @example man/Example/make_apa_str_1f_anova.R
-  #' @example man/Example/make_apa_str_ttest.R
-  #' @example man/Example/make_apa_str_chisq.R
+  #' @example man/Example/make_apa_str_exs.R
 
   #' @export
 
