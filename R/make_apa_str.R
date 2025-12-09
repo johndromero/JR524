@@ -83,15 +83,14 @@ make_apa_str = function(out) {
   else if (any(grepl('Anova Table', attr(out, "heading"), fixed=T))) {
 
     for (r in row.names(out)) {
-      if (r != 'Residuals') {
+
+      if (!any(grepl('Residuals', r, fixed=T)))  {
 
         pstr = get_pstr(out[r, ]$`Pr(>F)`)
         eq = get_eq(out[r, ]$`Pr(>F)`)
-
         str = sprintf('_F(%0.0f,%0.0f) = %0.2f, p %s %s_',
                       out[r, "Df"], out["Residuals", "Df"],
                       out[r, ]$`F value`, eq, pstr)
-
         r = gsub(":", "x", r)
         APAstr[[r]] = str
       }
