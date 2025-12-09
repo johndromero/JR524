@@ -22,7 +22,7 @@ make_apa_str = function(out) {
 
     pstr = get_pstr(out$p.value)
     eq = get_eq(out$p.value)
-    APAstr = sprintf('Chi-Squared(%d,N=%d) = %5.2f, p %s %s',
+    APAstr = sprintf('_Chi-Squared(%d,N=%d) = %5.2f, p %s %s_',
                   out$parameter,
                   sum(out$observed),
                   out$statistic,
